@@ -13,6 +13,7 @@
     "react/prop-types": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "react/button-has-type": "off",
+    "no-param-reassign": "off",
     "react/jsx-filename-extension": [
       1,
       {
