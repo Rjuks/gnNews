@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from 'react'
 import { Button, Modal as AntModal } from 'antd'
+import { useModalHandler } from '../../../helpers/useModalHandler'
 
 interface HeaderButtonModalProps {
   buttonText: string
@@ -12,15 +13,7 @@ export const ButtonModal = ({
   modalContent,
   modalTitle
 }: HeaderButtonModalProps) => {
-  const [showModal, setShowModal] = useState(false)
-
-  const handleShowModal = useCallback(() => {
-    setShowModal(true)
-  }, [])
-
-  const handleHideModal = useCallback(() => {
-    setShowModal(false)
-  }, [])
+  const { showModal, handleShowModal, handleHideModal } = useModalHandler()
 
   const modal = useMemo(() => {
     if (!showModal) {
