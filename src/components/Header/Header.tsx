@@ -13,18 +13,16 @@ export const Header = () => (
       </NavLink>
     </Menu.Item>
     <div className={styles.Header__buttons}>
-      <Menu.Item>
-        <Button.Group>
-          <ViewTypeButton type='primary' />
+      <Button.Group>
+        <ViewTypeButton type='primary' />
 
-          {/* todo - fill modal content */}
-          <ButtonModal
-            buttonText='Open modal'
-            modalTitle='Wymagania'
-            modalContent='Content'
-          />
-        </Button.Group>
-      </Menu.Item>
+        {/* todo - fill modal content */}
+        <ButtonModal
+          buttonText='Open modal'
+          modalTitle='Wymagania'
+          modalContent='Content'
+        />
+      </Button.Group>
     </div>
   </Menu>
 )

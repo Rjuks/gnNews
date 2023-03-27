@@ -1,5 +1,5 @@
 import { newsViewTypeEnum } from '../store/slices/configuration/types'
-import { NewsItem } from './types'
+import { NewsItem } from '../utils/types'
 
 export const mockupNewsData: NewsItem[] = Array.from({ length: 23 }).map(
   (_, i) => ({
