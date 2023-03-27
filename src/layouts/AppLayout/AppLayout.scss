@@ -1,0 +1,23 @@
+@import "src/styles/globals";
+
+.ant-menu-light .ant-menu-item {
+  color: $font-color;
+}
+
+.ant-menu-item-selected {
+  background-color: transparent !important;
+}
+
+.ant-menu-item:hover {
+  background-color: #e1e0e0 !important;
+}
+
+.ant-layout .ant-layout-sider, .ant-menu-light {
+  background: $primary-color;
+  box-shadow: $shadow-light;
+  border: 0 !important;
+}
+
+.ant-menu-item-group-title {
+  color: $font-color !important;
+}

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Modal as AntModal } from 'antd'
-import { Link } from 'react-router-dom'
 import { newsViewTypeEnum } from '../../../store/slices/configuration/types'
 import styles from './NewsItems.module.scss'
 import { NewsItem as NewsItemProps } from '../../../utils/types'
