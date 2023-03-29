@@ -1,5 +1,10 @@
 @import "src/styles/globals";
 
+
+.ContentContainer {
+  padding: 40px 0;
+}
+
 .ant-menu-light .ant-menu-item {
   color: $font-color;
 }
@@ -12,10 +17,14 @@
   background-color: #e1e0e0 !important;
 }
 
-.ant-layout .ant-layout-sider, .ant-menu-light {
+.ant-layout .ant-layout-sider, .ant-menu-light, .ant-layout-footer {
   background: $primary-color;
   box-shadow: $shadow-light;
   border: 0 !important;
+}
+
+.ant-layout .ant-layout-sider {
+  margin: 40px 0;
 }
 
 .ant-menu-item-group-title {
