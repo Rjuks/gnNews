@@ -2,9 +2,11 @@ import React from 'react'
 import { Layout } from 'antd'
 import SideMenu from '../../components/Sidemenu/Sidemenu'
 import { Header } from '../../components/Header/Header'
+import { Footer } from '../../components/Footer/Footer'
+
 import './AppLayout.scss'
 
-const { Content, Footer } = Layout
+const { Content } = Layout
 
 interface LayoutProps {
   children: React.ReactNode
@@ -15,8 +17,8 @@ export const AppLayout: React.FC<LayoutProps> = ({ children }) => (
     <Header />
     <Layout>
       <SideMenu />
-      <Content>{children}</Content>
+      <Content className='ContentContainer'>{children}</Content>
     </Layout>
-    <Footer>Ant Design ©2023 Created by Ant UED</Footer>
+    <Footer />
   </Layout>
 )

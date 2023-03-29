@@ -6,11 +6,14 @@
   height: 100%;
   flex-direction: column;
   align-items: center;
-  margin: 1rem 0;
   box-shadow: $shadow-light;
   transition: transform 0.2s ease-in-out;
   background-color: $primary-color;
   cursor: pointer;
+
+  &:not(:first-child):not(:last-child) {
+    margin: 1rem 0;
+  }
 
   &.gridItem {
     margin-right: 1.5rem;
