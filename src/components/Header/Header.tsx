@@ -1,7 +1,7 @@
 import { Menu, Button } from 'antd'
 import { NavLink } from 'react-router-dom'
 import { ViewTypeButton } from '../ViewTypeButton/ViewTypeButton'
-import { ROUTES } from '../../utils/routing'
+import { ROUTES } from '../../consts/routing'
 import styles from './Header.module.scss'
 import { ButtonModal } from './ButtonModal/ButtonModal'
 

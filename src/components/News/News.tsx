@@ -1,26 +1,23 @@
-import { useEffect } from 'react'
 import { NewsList } from './NewsList/NewsList'
-import { useAppDispatch, useAppSelector } from '../../store/hooks/hooks'
 import { STATUS } from '../../utils/types'
-import { fetchNews } from '../../store/slices/news/thunks'
+import { NewsStateSliceProps } from '../../store/slices/news/types'
 
-export const News = () => {
-  const dispatch = useAppDispatch()
-  const { news, status } = useAppSelector(state => state.news || [])
+interface NewsProps {
+  newsData: NewsStateSliceProps
+  countryCode?: string
+}
 
-  useEffect(() => {
-    let loading = false
+export const News = ({ newsData, countryCode }: NewsProps) => {
+  const { news, status, newsByCountry } = newsData
 
-    dispatch(fetchNews())
-
-    return () => {
-      loading = true
-    }
-  }, [dispatch])
+  const getProperNews = (countryCode ? newsByCountry[countryCode] : news) || []
 
   return (
     <section>
-      <NewsList newsList={news} isLoading={status === STATUS.LOADING} />
+      <NewsList
+        newsList={getProperNews}
+        isLoading={status === STATUS.LOADING}
+      />
     </section>
   )
 }

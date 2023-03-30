@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { NewsStateSliceProps } from './types'
-import { fetchNews } from './thunks'
+import { fetchNews, fetchNewsByCountry } from './thunks'
 import { STATUS } from '../../../utils/types'
 
 const initialState: NewsStateSliceProps = {
   news: [],
+  newsByCountry: {},
   status: STATUS.IDLE,
   error: null
 }
@@ -15,6 +16,7 @@ const newsSlice = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder
+      // All news
       .addCase(fetchNews.pending, state => {
         state.status = STATUS.LOADING
       })
@@ -24,6 +26,20 @@ const newsSlice = createSlice({
         state.error = null
       })
       .addCase(fetchNews.rejected, (state, action) => {
+        state.status = STATUS.FAILED
+        state.error = action.payload as string
+      })
+      // News by country
+      .addCase(fetchNewsByCountry.pending, state => {
+        state.status = STATUS.LOADING
+      })
+      .addCase(fetchNewsByCountry.fulfilled, (state, action) => {
+        const countryCode = action.meta.arg
+        state.status = STATUS.SUCCEEDED
+        state.newsByCountry[countryCode] = action.payload
+        state.error = null
+      })
+      .addCase(fetchNewsByCountry.rejected, (state, action) => {
         state.status = STATUS.FAILED
         state.error = action.payload as string
       })
