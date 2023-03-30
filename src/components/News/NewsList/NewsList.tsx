@@ -20,6 +20,10 @@ export const NewsList = ({ newsList, isLoading }: NewsListProps) => {
     )
   }
 
+  if (newsList.length === 0) {
+    return <p>Missing news... :(</p>
+  }
+
   return (
     <div
       className={
@@ -30,11 +34,11 @@ export const NewsList = ({ newsList, isLoading }: NewsListProps) => {
         ]
       }
     >
-      {newsList.map(news => (
+      {newsList.map((news, index) => (
         <NewsItem
           newsItemData={news}
           listViewType={listViewType}
-          key={news.id}
+          key={`${news.id}_${news.author}`}
         />
       ))}
     </div>

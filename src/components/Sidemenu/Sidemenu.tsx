@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout, Menu } from 'antd'
 import { NavLink } from 'react-router-dom'
 import { CountriesData } from '../../consts/flags'
-import { ROUTES } from '../../utils/routing'
+import { ROUTES } from '../../consts/routing'
 
 const { Sider } = Layout
 
