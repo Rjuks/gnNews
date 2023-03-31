@@ -1,0 +1,21 @@
+{
+  "NEWS_VIEW_GRID": "Kafelki",
+  "NEWS_VIEW_LIST": "Lista",
+  "MODAL_INFO": "Pokaż informacje",
+  "FLAG_POLAND": "Polska",
+  "FLAG_GERMANY": "Niemcy",
+  "FLAG_SWEDEN": "Szwecja",
+  "FLAG_FRANCE": "Francja",
+  "FLAG_USA": "USA",
+
+  "NEWS_AMOUNT": "Liczba wydarzeń: {{amount}}",
+
+  "COUNTRY_NEWS": "Wydarzenia z kraju",
+
+  "REDIRECT_TO_SOURCE": "Kliknij aby wyświetlić źródło!",
+
+  "CHANGE_LANGUAGE": "Zmień język",
+  "LANGUAGE_POLISH": "Polski",
+  "LANGUAGE_ENGLISH": "Angielski"
+
+}

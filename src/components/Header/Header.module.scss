@@ -1,0 +1,26 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: auto;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__languageSelect {
+   width: 90px;
+
+    &_dropdown {
+      width: 200px;
+    }
+  }
+}

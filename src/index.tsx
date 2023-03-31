@@ -1,20 +1,30 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
-import { store } from './app/store'
-import App from './App'
+import { App } from './App'
 import reportWebVitals from './reportWebVitals'
-import './index.css'
+import './index.scss'
+import { store } from './store/store'
+import i18n from './translations/i18n'
 
 const container = document.getElementById('root')!
 const root = createRoot(container)
 
+const lang = localStorage.getItem('language')
+
+if (lang) {
+  i18n.changeLanguage(lang)
+} else {
+  i18n.changeLanguage()
+}
+
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>
+  </BrowserRouter>
 )
 
 // If you want to start measuring performance in your app, pass a function
