@@ -1,4 +1,4 @@
-import { NewsItem, STATUS } from '../../../utils/types'
+import { NewsItem, STATUS } from '../../../consts/types'
 
 export type NewsByCountryProps = {
   [key: string]: NewsItem[]

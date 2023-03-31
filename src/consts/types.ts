@@ -1,5 +1,3 @@
-import { newsViewTypeEnum } from '../store/slices/configuration/types'
-
 /* Common types */
 
 export enum STATUS {
@@ -10,7 +8,6 @@ export enum STATUS {
 }
 
 export interface NewsItem {
-  id: number
   title: string
   source: {
     id?: string | null

@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { NewsStateSliceProps } from './types'
 import { fetchNews, fetchNewsByCountry } from './thunks'
-import { STATUS } from '../../../utils/types'
+import { STATUS } from '../../../consts/types'
 
 const initialState: NewsStateSliceProps = {
   news: [],

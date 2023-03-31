@@ -1,8 +1,9 @@
 import React from 'react'
 import { Modal as AntModal } from 'antd'
+import { Link } from 'react-router-dom'
 import { newsViewTypeEnum } from '../../../store/slices/configuration/types'
 import styles from './NewsItems.module.scss'
-import { NewsItem as NewsItemProps } from '../../../utils/types'
+import { NewsItem as NewsItemProps } from '../../../consts/types'
 import { useModalHandler } from '../../../helpers/useModalHandler'
 import placeholderImage from '../../../assets/placeholder.png'
 
@@ -23,16 +24,16 @@ export const NewsItem: React.FC<NewsListItemProps> = ({
   return (
     <>
       <AntModal
-        visible={showModal}
+        open={showModal}
         onCancel={handleHideModal}
         title={author}
         centered
         footer={null}
       >
         Source:{' '}
-        <a href={url} target='_blank' rel='noreferrer'>
+        <Link to={url} target='_blank' rel='noreferrer'>
           Click to redirect!
-        </a>
+        </Link>
       </AntModal>
       <div
         className={`${styles.newsItem} ${

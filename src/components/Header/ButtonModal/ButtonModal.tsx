@@ -1,11 +1,11 @@
-import { useCallback, useMemo, useState } from 'react'
+import { ReactElement, useCallback, useMemo, useState } from 'react'
 import { Button, Modal as AntModal } from 'antd'
 import { useModalHandler } from '../../../helpers/useModalHandler'
 
 interface HeaderButtonModalProps {
   buttonText: string
   modalTitle: string
-  modalContent?: string
+  modalContent?: string | ReactElement
 }
 
 export const ButtonModal = ({
@@ -22,7 +22,7 @@ export const ButtonModal = ({
 
     return (
       <AntModal
-        visible={showModal}
+        open={showModal}
         onCancel={handleHideModal}
         title={modalTitle}
         centered

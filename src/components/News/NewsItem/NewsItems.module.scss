@@ -11,14 +11,12 @@
   background-color: $primary-color;
   cursor: pointer;
 
-  &:not(:first-child):not(:last-child) {
-    margin: 1rem 0;
-  }
 
   &.gridItem {
     margin-right: 1.5rem;
     display: block;
     width: 100%;
+
 
     @media (max-width: 768px) {
       display: block;
@@ -29,6 +27,10 @@
 
   &.listItem {
     width: 100%;
+
+    &:not(:first-child):not(:last-child) {
+      margin: 1rem 0;
+    }
   }
 
   &:hover {

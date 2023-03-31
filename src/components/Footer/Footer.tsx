@@ -20,8 +20,6 @@ export const Footer = () => {
       currentNewsAmount = newsState.newsByCountry[countryCode]
         ? newsState.newsByCountry[countryCode].length
         : 0
-
-      console.log(newsState.newsByCountry[countryCode])
     } else {
       currentNewsAmount = newsState.news.length
     }
