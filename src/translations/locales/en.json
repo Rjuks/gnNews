@@ -1,0 +1,23 @@
+{
+  "NEWS_VIEW_GRID": "Grid",
+  "NEWS_VIEW_LIST": "List",
+
+
+  "MODAL_INFO": "Show information",
+
+  "FLAG_POLAND": "Poland",
+  "FLAG_GERMANY": "Germany",
+  "FLAG_SWEDEN": "Sweden",
+  "FLAG_FRANCE": "France",
+  "FLAG_USA": "USA",
+
+  "NEWS_AMOUNT": "Current news: {{amount}}",
+
+  "COUNTRY_NEWS": "Country news",
+
+  "REDIRECT_TO_SOURCE": "Click to view source!",
+
+  "CHANGE_LANGUAGE": "Change language",
+  "LANGUAGE_POLISH": "Polish",
+  "LANGUAGE_ENGLISH": "English"
+}

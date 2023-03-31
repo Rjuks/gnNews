@@ -33,7 +33,7 @@ export const CountriesData: Country[] = [
   },
   {
     code: 'us',
-    name: 'United States',
+    name: 'USA',
     flagImg: unitedStatesFlagImg
   }
 ]

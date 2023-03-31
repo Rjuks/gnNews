@@ -5,10 +5,10 @@
 }
 
 .GridContainer {
-  width: 70%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+  width: 80%;
   margin: 0 auto;
 
   @media (max-width: 992px) {

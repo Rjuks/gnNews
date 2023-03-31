@@ -13,14 +13,12 @@
 
 
   &.gridItem {
-    margin-right: 1.5rem;
     display: block;
     width: 100%;
 
 
     @media (max-width: 768px) {
       display: block;
-      margin: 1rem 0;
       width: 100%;
     }
   }

@@ -15,4 +15,12 @@
     justify-content: flex-end;
     align-items: center;
   }
+
+  &__languageSelect {
+   width: 90px;
+
+    &_dropdown {
+      width: 200px;
+    }
+  }
 }
