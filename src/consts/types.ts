@@ -19,3 +19,8 @@ export interface NewsItem {
   url: string
   urlToImage?: string
 }
+
+export enum LANGUAGES {
+  ENGLISH = 'en',
+  POLISH = 'pl'
+}

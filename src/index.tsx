@@ -6,9 +6,18 @@ import { App } from './App'
 import reportWebVitals from './reportWebVitals'
 import './index.scss'
 import { store } from './store/store'
+import i18n from './translations/i18n'
 
 const container = document.getElementById('root')!
 const root = createRoot(container)
+
+const lang = localStorage.getItem('language')
+
+if (lang) {
+  i18n.changeLanguage(lang)
+} else {
+  i18n.changeLanguage()
+}
 
 root.render(
   <BrowserRouter>

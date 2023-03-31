@@ -1,6 +1,7 @@
 import React from 'react'
 import { Modal as AntModal } from 'antd'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { newsViewTypeEnum } from '../../../store/slices/configuration/types'
 import styles from './NewsItems.module.scss'
 import { NewsItem as NewsItemProps } from '../../../consts/types'
@@ -16,6 +17,8 @@ export const NewsItem: React.FC<NewsListItemProps> = ({
   newsItemData,
   listViewType
 }) => {
+  const { t } = useTranslation()
+
   const { showModal, handleShowModal, handleHideModal } = useModalHandler()
 
   const { title, source, publishedAt, urlToImage, description, author, url } =
@@ -30,9 +33,8 @@ export const NewsItem: React.FC<NewsListItemProps> = ({
         centered
         footer={null}
       >
-        Source:{' '}
         <Link to={url} target='_blank' rel='noreferrer'>
-          Click to redirect!
+          {t('REDIRECT_TO_SOURCE')}
         </Link>
       </AntModal>
       <div

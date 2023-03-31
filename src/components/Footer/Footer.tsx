@@ -1,6 +1,7 @@
 import { Layout } from 'antd'
 import { useLocation } from 'react-router-dom'
 import { useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Time } from '../Time/Time'
 import styles from './Footer.module.scss'
 import { useAppSelector } from '../../store/hooks/hooks'
@@ -10,6 +11,8 @@ const { Footer: AntFooter } = Layout
 
 export const Footer = () => {
   const location = useLocation()
+  const { t } = useTranslation()
+
   const countryCode = location.pathname.split(`/${ROUTES.COUNTRY}/`)[1] || false
 
   const newsState = useAppSelector(state => state.news)
@@ -29,9 +32,9 @@ export const Footer = () => {
 
   return (
     <AntFooter className={styles.Footer}>
-      <span
-        className={styles.Footer__articlesAmount}
-      >{`Current articles: ${currentNewsAmount}`}</span>
+      <span className={styles.Footer__articlesAmount}>
+        {t('NEWS_AMOUNT', { amount: currentNewsAmount })}
+      </span>
       <Time />
     </AntFooter>
   )
