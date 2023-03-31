@@ -4,10 +4,11 @@ import { ViewTypeButton } from '../ViewTypeButton/ViewTypeButton'
 import { ROUTES } from '../../consts/routing'
 import styles from './Header.module.scss'
 import { ButtonModal } from './ButtonModal/ButtonModal'
+import { modalContent } from '../../consts/mockups'
 
 export const Header = () => (
   <Menu className={styles.Header} mode='horizontal'>
-    <Menu.Item>
+    <Menu.Item key='logo'>
       <NavLink className={styles.Header__logo} to={ROUTES.HOME}>
         gnNews
       </NavLink>
@@ -16,29 +17,16 @@ export const Header = () => (
       <Button.Group>
         <ViewTypeButton type='primary' />
 
-        {/* todo - fill modal content */}
         <ButtonModal
           buttonText='Open modal'
-          modalTitle='Wymagania'
-          modalContent={`
-          Pozytywne aspekty:
-          - Przetestowanie paczki ant-design
-          - Tworzenie projektu od zera
-          
-          
-         Negatywne aspekty:
-         - Dosyć chaotyczny "boilerplate" aplikacji. Z opisu zadania można zbudować fajną podstawkę pod rozbudowę, 
-         lecz 12 godzin na instalacje paczek, konfiguracje, utworzenie i przemyślenie komponentów, responsywnosci, testów itp, 
-         jest imo troszke okrojonym czasem.
-         
-         
-         Uwagi: 
-         
-         Głownie skupiłem się na funkcjonalnościach. UI odłożyłem na dalszy plan, wiele rzeczy mogłoby zostać dopracowane:
-         - Lepsze zabezpieczenie requestów z API (type guardy, mappery)
-         - Dopracowanie designu (preferuje zespołowo uzgodnić dany flow UI/IX czy kolorystykę)
-         - Zadbanie o bardziej reużywalne i responsywne zastosowanie styli
-          `}
+          modalTitle='Opis'
+          modalContent={
+            <div
+              dangerouslySetInnerHTML={{
+                __html: modalContent.replace(/\n/g, '<br>')
+              }}
+            />
+          }
         />
       </Button.Group>
     </div>

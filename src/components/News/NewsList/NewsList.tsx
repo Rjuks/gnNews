@@ -1,6 +1,7 @@
 import { Spin } from 'antd'
+import { v4 as uuidv4 } from 'uuid'
 import { NewsItem } from '../NewsItem/NewsItem'
-import { NewsItem as NewsItemProps } from '../../../utils/types'
+import { NewsItem as NewsItemProps } from '../../../consts/types'
 import styles from './NewsList.module.scss'
 import { useAppSelector } from '../../../store/hooks/hooks'
 import { newsViewTypeEnum } from '../../../store/slices/configuration/types'
@@ -38,7 +39,7 @@ export const NewsList = ({ newsList, isLoading }: NewsListProps) => {
         <NewsItem
           newsItemData={news}
           listViewType={listViewType}
-          key={`${news.id}_${news.author}`}
+          key={uuidv4()}
         />
       ))}
     </div>

@@ -1,5 +1,5 @@
 import { NewsList } from './NewsList/NewsList'
-import { STATUS } from '../../utils/types'
+import { STATUS } from '../../consts/types'
 import { NewsStateSliceProps } from '../../store/slices/news/types'
 
 interface NewsProps {

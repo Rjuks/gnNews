@@ -11,11 +11,8 @@ const SideMenu = () => (
     <Menu mode='inline'>
       <Menu.ItemGroup title='Country news'>
         {CountriesData.map(country => (
-          <NavLink to={`${ROUTES.COUNTRY}/${country.code}`}>
-            <Menu.Item
-              key={country.code}
-              icon={<img src={country.flagImg} alt={country.name} />}
-            >
+          <NavLink to={`${ROUTES.COUNTRY}/${country.code}`} key={country.name}>
+            <Menu.Item icon={<img src={country.flagImg} alt={country.name} />}>
               <span>{country.name}</span>
             </Menu.Item>
           </NavLink>

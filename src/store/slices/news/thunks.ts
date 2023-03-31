@@ -9,7 +9,7 @@ export const fetchNews = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await axiosAPI.get(
-        `/everything?q=ReactJS&apiKey=${API_KEY}`
+        `/everything?q=Polska&apiKey=${API_KEY}`
       )
 
       return response.data.articles
